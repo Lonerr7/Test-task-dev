@@ -12,10 +12,15 @@
     padding: 24px 48px;
     border: 3px solid $orange;
     border-radius: 64px;
+    background-color: $body-bg;
+    position: relative;
+    z-index: 800;
   }
 }
 
 // === /header ===
+
+// === menu ===
 
 .menu {
   max-width: 1060px;
@@ -23,6 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   &__list {
     max-width: 574px;
@@ -42,7 +48,7 @@
   }
 
   &__controls {
-    max-width: 288px;
+    max-width: 290px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,3 +83,145 @@
     background-color: $orange;
   }
 }
+
+// === /menu ===
+
+// === main ===
+
+@keyframes left-right-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes center-top {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.main {
+  &__left {
+    max-width: 700px;
+    position: relative;
+    z-index: 900;
+  }
+
+  &__left::after {
+    content: '';
+    z-index: 100;
+    width: 1000px;
+    height: 1300px;
+    position: absolute;
+    top: -450px;
+    left: -200px;
+    background-image: url('../images/DotLight.png');
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title,
+  &__subtitle {
+    font-weight: 500;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    font-size: 96px;
+    line-height: 96px;
+    margin-bottom: 24px;
+  }
+
+  &__title--colored {
+    color: $orange;
+  }
+
+  &__subtitle {
+    color: $gray;
+    margin-bottom: 48px;
+    font-size: 32px;
+  }
+
+  &__link {
+    padding: 20px 72px;
+    background-color: $orange;
+    border-radius: 48px;
+    font-size: 32px;
+    font-weight: 600;
+    position: relative;
+    z-index: 800;
+  }
+
+  &__animation {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 332px;
+    display: flex;
+    height: 90vh;
+  }
+
+  &__animation_left,
+  &__animation_center {
+    margin-right: 16px;
+  }
+
+  &__animation_left,
+  &__animation_center,
+  &__animation_right {
+    position: relative;
+    z-index: 5;
+    width: 100px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  &__animation_left,
+  &__animation_right {
+    opacity: 0.3;
+  }
+
+  &__animation_left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120%;
+    width: 100px;
+  }
+
+  &__animation_block--left {
+    animation: 20s center-top infinite linear;
+  }
+
+  &__animation_block--center {
+    animation: 10s left-right-down infinite linear;
+  }
+
+  &__animation_block--right {
+    animation: 9s center-top infinite linear;
+  }
+
+  &__animation_img {
+    margin-bottom: 22px;
+  }
+}
+
+// === /main ===

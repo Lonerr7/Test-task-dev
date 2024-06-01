@@ -1,20 +1,32 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: $body-bg;
-    font-family: $font-family1;
-    color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $body-bg;
+  font-family: $font-family1;
+  font-weight: 400;
+  color: #fff;
+  overflow-y: hidden;
+}
+
+.menu,
+h1,
+h2 {
+  position: relative;
+  z-index: 200;
 }
 
 .container {
-    // max-width: $container;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: $container;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .lock {
-    overflow: hidden;
+  overflow: hidden;
 }
-
