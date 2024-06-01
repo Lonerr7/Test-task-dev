@@ -1,0 +1,79 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+@import 'media';
+
+// === header ===
+.header {
+  &__inner {
+    margin-top: 16px;
+    padding: 24px 48px;
+    border: 3px solid $orange;
+    border-radius: 64px;
+  }
+}
+
+// === /header ===
+
+.menu {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    max-width: 574px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__list-link {
+    font-weight: 400;
+  }
+
+  &__controls {
+    max-width: 288px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+
+  &__control {
+    margin-right: 10px;
+    padding: 14px;
+    border-radius: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__control_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__control_img {
+    margin-right: 8px;
+  }
+
+  &__control--transparent {
+    border: 2px solid $btn-border;
+  }
+
+  &__control--full {
+    background-color: $orange;
+  }
+}

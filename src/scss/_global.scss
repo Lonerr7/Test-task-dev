@@ -1,0 +1,20 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $body-bg;
+    font-family: $font-family1;
+    color: #fff;
+}
+
+.container {
+    // max-width: $container;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.lock {
+    overflow: hidden;
+}
+
