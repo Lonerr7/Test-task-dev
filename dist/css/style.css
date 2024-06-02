@@ -621,6 +621,12 @@ h2 {
   color: #F97247;
 }
 
+@media (max-width: 1000px) {
+  .footer {
+    padding: 40px 40px 24px 40px;
+  }
+}
+
 @media (max-width: 866px) {
   body {
     overflow-y: scroll;
@@ -761,6 +767,41 @@ h2 {
     background-clip: padding-box;
     border-radius: 9999px;
     background-color: #F97247;
+  }
+}
+
+@media (max-width: 730px) {
+  .footer__menu {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 510px) {
+  .footer__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+
+  .footer__menuLink {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .footer__title {
+    text-align: left;
   }
 }
 
