@@ -389,11 +389,58 @@ h2 {
   margin-bottom: 22px;
 }
 
+.main__right_title {
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 24px;
+}
+
+.main__right_items {
+  position: relative;
+  z-index: 900;
+  overflow-y: scroll;
+  width: 530px;
+  max-height: 596px;
+  border: 3px solid #F97247;
+  border-radius: 100px;
+  padding: 40px 40px 0 40px !important;
+}
+
+.main__right_item {
+  padding: 16px 64px;
+  margin-bottom: 16px;
+  border-radius: 100px;
+  background-color: #311212;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.main__right_item:hover {
+  background-color: #F97247;
+}
+
+.main__right_item:last-child {
+  margin-bottom: 0;
+}
+
+.main__right_itemTitle {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
 .footer {
   position: relative;
   z-index: 900;
   background-color: #311212;
   padding: 40px 140px 24px 140px;
+  border: 3px #F97247;
+  border-style: solid solid none solid;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
 }
 
 .footer__nav {
@@ -460,6 +507,12 @@ h2 {
 .footer__menuLink:hover {
   text-decoration: underline;
   color: #F97247;
+}
+
+@media (max-height: 800px) {
+  .main .main__right_items {
+    max-height: 300px;
+  }
 }
 
 .webp .main__left::after { background-image: url(../images/DotLight.webp); }
