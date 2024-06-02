@@ -107,6 +107,8 @@
 }
 
 .main {
+  margin-bottom: 88px;
+
   &__left {
     max-width: 700px;
     position: relative;
@@ -225,3 +227,60 @@
 }
 
 // === /main ===
+
+// === footer ===
+
+.footer {
+  position: relative;
+  z-index: 900;
+  background-color: $footer-bg;
+  padding: 40px 140px 24px 140px;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__menu {
+    width: 362px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menuItem:not(:last-child),
+  &__socialsListItem:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__title,
+  &__socialsListLink {
+    line-height: 20px;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    text-align: end;
+    font-size: 16px;
+  }
+
+  &__socialsList {
+    width: 232px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menuLink {
+    transition: color 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: $orange;
+    }
+  }
+}
+
+// === /footer ===

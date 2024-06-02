@@ -251,6 +251,10 @@ h2 {
   }
 }
 
+.main {
+  margin-bottom: 88px;
+}
+
 .main__left {
   max-width: 700px;
   position: relative;
@@ -383,6 +387,79 @@ h2 {
 
 .main__animation_img {
   margin-bottom: 22px;
+}
+
+.footer {
+  position: relative;
+  z-index: 900;
+  background-color: #311212;
+  padding: 40px 140px 24px 140px;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.footer__menu {
+  width: 362px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__menuItem:not(:last-child),
+.footer__socialsListItem:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer__title,
+.footer__socialsListLink {
+  line-height: 20px;
+}
+
+.footer__title {
+  margin-bottom: 14px;
+  text-align: end;
+  font-size: 16px;
+}
+
+.footer__socialsList {
+  width: 232px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__menuLink {
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.footer__menuLink:hover {
+  text-decoration: underline;
+  color: #F97247;
 }
 
 .webp .main__left::after { background-image: url(../images/DotLight.webp); }
