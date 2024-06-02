@@ -83,7 +83,7 @@ body {
   font-family: "Lexend", sans-serif;
   font-weight: 400;
   color: #fff;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .menu,
@@ -491,15 +491,13 @@ h2 {
 }
 
 .main__right_items {
+  background-color: rgba(255, 255, 255, 0.12);
   position: relative;
   z-index: 900;
   width: 530px;
   max-height: 596px;
   border: 3px solid #F97247;
   padding: 40px 40px 0 40px !important;
-}
-
-.main__right_items {
   overflow-y: scroll;
   overflow-x: hidden;
   border-radius: 100px;
@@ -624,6 +622,14 @@ h2 {
 }
 
 @media (max-width: 866px) {
+  body {
+    overflow-y: scroll;
+  }
+
+  .header {
+    margin-bottom: 70px;
+  }
+
   .header__inner {
     padding: 10px 14px;
     width: 100%;
@@ -666,6 +672,95 @@ h2 {
 
   .langText {
     display: none;
+  }
+
+  .main {
+    margin-bottom: 145px;
+  }
+
+  .main__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .main__left {
+    margin-bottom: 58px;
+  }
+
+  .main__left::after {
+    display: none;
+  }
+
+  .main__title {
+    font-size: 46px;
+    line-height: 50px;
+  }
+
+  .main__title,
+  .main__subtitle {
+    text-align: center;
+  }
+
+  .main__subtitle {
+    margin-bottom: 24px;
+  }
+
+  .main__link {
+    font-size: 18px;
+    padding: 15px;
+    width: 98%;
+    text-align: center;
+  }
+
+  .main__animation {
+    display: none;
+  }
+
+  .main__right_title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 18px;
+  }
+
+  .main__right_items {
+    width: 300px;
+    height: 421px;
+    max-height: 100%;
+    border-radius: 50px;
+    padding: 10px 16px 0 10px !important;
+  }
+
+  .main__right_item {
+    padding: 15px 35px;
+    border-radius: 40px;
+  }
+
+  .main__right_itemTitle {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+
+  .main__right_itemDate {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .main__right_items::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .main__right_items::-webkit-scrollbar-thumb {
+    background-color: #F97247;
+  }
+
+  .main__right_items::-webkit-scrollbar-thumb {
+    border: 3px solid rgba(208, 84, 84, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #F97247;
   }
 }
 

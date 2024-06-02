@@ -319,15 +319,13 @@
   }
 
   &__right_items {
+    background-color: rgba($color: #fff, $alpha: 0.12);
     position: relative;
     z-index: 900;
     width: 530px; //!
     max-height: 596px;
     border: 3px solid $orange;
     padding: 40px 40px 0 40px !important;
-  }
-
-  &__right_items {
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 100px;
