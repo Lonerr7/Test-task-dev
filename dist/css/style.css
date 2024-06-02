@@ -277,7 +277,7 @@ h2 {
   font-size: 18px;
   line-height: 24px;
   padding: 13px 20px;
-  width: 92%;
+  width: 93%;
   margin: 0 auto 5px auto;
   border-radius: 28px;
 }
@@ -626,6 +626,7 @@ h2 {
 @media (max-width: 866px) {
   .header__inner {
     padding: 10px 14px;
+    width: 100%;
   }
 
   .burger {
@@ -637,6 +638,7 @@ h2 {
         -ms-flex-pack: end;
             justify-content: end;
     gap: 10px;
+    max-width: none;
   }
 
   .menu__controls {

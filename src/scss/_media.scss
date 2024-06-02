@@ -3,6 +3,7 @@
 @media (max-width: 866px) {
   .header__inner {
     padding: 10px 14px;
+    width: 100%;
   }
 
   .burger {
@@ -12,6 +13,8 @@
   .menu {
     justify-content: end;
     gap: 10px;
+
+    max-width: none;
 
     &__controls {
       justify-content: end;
