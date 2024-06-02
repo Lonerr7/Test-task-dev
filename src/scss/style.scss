@@ -198,17 +198,6 @@
     opacity: 0.3;
   }
 
-  &__animation_left::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 120%;
-    width: 100px;
-  }
-
   &__animation_block--left {
     animation: 20s center-top infinite linear;
   }
@@ -235,11 +224,9 @@
   &__right_items {
     position: relative;
     z-index: 900;
-    overflow-y: scroll;
     width: 530px; //!
     max-height: 596px;
     border: 3px solid $orange;
-    border-radius: 100px;
     padding: 40px 40px 0 40px !important;
   }
 
@@ -249,12 +236,35 @@
     }
   }
 
+  &__right_items {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 100px;
+  }
+
+  &__right_items::-webkit-scrollbar {
+    width: 70px; // was 8
+    // height: 50px;
+  }
+
+  &__right_items::-webkit-scrollbar-thumb {
+    background-color: $orange;
+  }
+
+  &__right_items::-webkit-scrollbar-thumb {
+    border: 30px solid rgba(208, 84, 84, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: $orange;
+  }
+
   &__right_item {
     padding: 16px 64px;
     margin-bottom: 16px;
     border-radius: 100px;
     background-color: $footer-bg;
     transition: background-color 0.3s;
+    width: 110%;
 
     &:hover {
       background-color: $orange;
