@@ -18,3 +18,12 @@ langBtn.addEventListener('click', (e) => {
     textSpan.innerHTML = 'RU';
   }
 });
+
+// Toggling burger icon
+const burgerBtn = document.querySelector('.burger');
+const mobileMenu = document.querySelector('.mobileMenu');
+
+burgerBtn.addEventListener('click', () => {
+  burgerBtn.classList.toggle('isActive');
+  mobileMenu.classList.toggle('isActive');
+});

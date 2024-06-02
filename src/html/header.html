@@ -1,4 +1,40 @@
 <header class="header">
+  <nav class="mobileMenu">
+    <ul class="mobileMenu__list">
+      <li class="mobileMenu__list__list-item">
+        <a class="mobileMenu__list__list-link" href="#">About Us</a>
+      </li>
+      <li class="mobileMenu__list__list-item">
+        <a class="mobileMenu__list__list-link" href="#">Grand</a>
+      </li>
+      <li class="mobileMenu__list__list-item">
+        <a class="mobileMenu__list__list-link" href="#">Commissions</a>
+      </li>
+      <li class="mobileMenu__list__list-item">
+        <a class="mobileMenu__list__list-link" href="#">Blub</a>
+      </li>
+      <li class="mobileMenu__list__list-item">
+        <a class="mobileMenu__list__list-link" href="#">Contact us</a>
+      </li>
+      <li class="mobileMenu__list__list-item">
+        <a class="mobileMenu__list__list-link" href="#">Careers</a>
+      </li>
+    </ul>
+
+    <div class="mobileMenu__controls">
+      <a
+        class="mobileMenu__control mobileMenu__control_login"
+        href="#"
+        >LOG IN</a
+      >
+      <a
+        class="mobileMenu__control mobileMenu__control_signUp"
+        href="#"
+        >SIGN UP</a
+      >
+    </div>
+  </nav>
+
   <div class="container">
     <div class="header__inner">
       <nav class="menu">
@@ -24,16 +60,32 @@
         </ul>
 
         <div class="menu__controls">
-          <button class="menu__control menu__control_btn menu__control--transparent">
-            <img class="menu__control_img" src="../images/world.svg" alt="world" />
+          <button
+            class="menu__control menu__control_lang menu__control_btn menu__control--transparent"
+          >
+            <img
+              class="menu__control_img"
+              src="../images/world.svg"
+              alt="world"
+            />
             <span class="langText">RU</span>
           </button>
 
-          <a class="menu__control menu__control--transparent" href="#"
+          <a
+            class="menu__control menu__control--transparent menu__control_login"
+            href="#"
             >LOG IN</a
           >
-          <a class="menu__control menu__control--full" href="#">SIGN UP</a>
+          <a
+            class="menu__control menu__control--full menu__control_login"
+            href="#"
+            >SIGN UP</a
+          >
         </div>
+
+        <button class="burger">
+          <div class="burger__item"></div>
+        </button>
       </nav>
     </div>
   </div>

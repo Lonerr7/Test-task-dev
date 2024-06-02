@@ -22,12 +22,53 @@
 
 // === menu ===
 
+.burger {
+  display: none;
+  position: relative;
+
+  width: 35px;
+  cursor: pointer;
+}
+
+.burger__item,
+.burger::before,
+.burger::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.burger::before {
+  margin-top: 0;
+}
+
+.burger::after {
+  margin-bottom: 0;
+}
+
+.burger.isActive .burger__item {
+  opacity: 0;
+}
+
+.burger.isActive::before {
+  transform: rotate(-45deg) translate(-7px, 3px);
+}
+
+.burger.isActive::after {
+  transform: rotate(45deg) translate(-8px, -5px);
+}
+
 .menu {
   max-width: 1060px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   position: relative;
 
   &__list {
@@ -82,6 +123,59 @@
   &__control--full {
     background-color: $orange;
   }
+}
+
+.mobileMenu {
+  overflow-y: scroll;
+  position: fixed;
+  top: 100px;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 100;
+  background-color: $body-bg;
+  transition: 0.3s;
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__list__list-item,
+  &__control {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 13px 20px;
+    width: 92%;
+    margin: 0 auto 5px auto;
+    border-radius: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list__list-item {
+    border: 3px solid $orange;
+  }
+
+  &__control {
+    text-align: center;
+  }
+
+  &__control_login {
+    border: 3px solid $btn-border;
+    background-color: $footer-bg;
+  }
+
+  &__control_signUp {
+    background-color: $orange;
+  }
+}
+
+.mobileMenu.isActive {
+  left: 0;
 }
 
 // === /menu ===
@@ -230,12 +324,6 @@
     padding: 40px 40px 0 40px !important;
   }
 
-  @media (max-height: 800px) {
-    .main__right_items {
-      max-height: 300px;
-    }
-  }
-
   &__right_items {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -243,8 +331,7 @@
   }
 
   &__right_items::-webkit-scrollbar {
-    width: 70px; // was 8
-    // height: 50px;
+    width: 70px;
   }
 
   &__right_items::-webkit-scrollbar-thumb {

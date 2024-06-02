@@ -1,0 +1,52 @@
+// === header ===
+
+@media (max-width: 866px) {
+  .header__inner {
+    padding: 10px 14px;
+  }
+
+  .burger {
+    display: block;
+
+    &__item {
+    }
+  }
+
+  .menu {
+    justify-content: end;
+    gap: 10px;
+
+    &__controls {
+      justify-content: end;
+    }
+
+    &__control_login {
+      display: none;
+    }
+
+    &__control_lang {
+      padding: 8px;
+      margin-right: 0;
+    }
+
+    &__control_img {
+      margin-right: 0;
+    }
+
+    &__list {
+      display: none;
+    }
+  }
+
+  .langText {
+    display: none;
+  }
+}
+
+// === /header ===
+
+@media (max-height: 800px) {
+  .main__right_items {
+    max-height: 300px;
+  }
+}
