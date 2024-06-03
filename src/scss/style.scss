@@ -421,6 +421,18 @@
     align-items: center;
   }
 
+  &__socialsListItem:hover {
+    svg {
+      path {
+        fill: $footer-img-hover;
+
+        &:last-child {
+          fill: #191D0A;
+        }
+      }
+    }
+  }
+
   &__menuLink {
     transition: color 0.3s;
     text-decoration: none;
@@ -430,6 +442,8 @@
       color: $orange;
     }
   }
+
+  
 }
 
 // === /footer ===

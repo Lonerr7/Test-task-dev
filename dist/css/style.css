@@ -609,6 +609,14 @@ h2 {
           align-items: center;
 }
 
+.footer__socialsListItem:hover svg path {
+  fill: rgba(95, 57, 57, 0.7215686275);
+}
+
+.footer__socialsListItem:hover svg path:last-child {
+  fill: #191D0A;
+}
+
 .footer__menuLink {
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
